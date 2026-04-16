@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shabana Yesmin | Portfolio</title>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* PARTICLES */
+#particles-js{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:black;
+}
+
+/* GLASS CARD */
+.glass-card{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  gap:30px;
+  padding:30px 40px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.2);
+  color:white;
+}
+
+/* PROFILE */
+.profile-img{
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #00ffd5;
+}
+
+/* TEXT */
+.main-text{
+  font-size:30px;
+}
+
+.cursor{
+  width:2px;
+  background:#00ffd5;
+  display:inline-block;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0;}
+}
+
+/* FLOATING TEXT */
+.floating{
+  position:absolute;
+  color:#ccc;
+  font-size:14px;
+  animation:float 6s infinite ease-in-out;
+}
+
+.t1{top:15%;left:10%;}
+.t2{top:25%;right:10%;}
+.t3{bottom:20%;left:15%;}
+.t4{bottom:25%;right:10%;}
+.t5{top:60%;left:5%;}
+.t6{top:65%;right:5%;}
+
+@keyframes float{
+  50%{transform:translateY(-15px);}
+}
+
+/* SECTIONS */
+section{
+  padding:50px 20px;
+  text-align:center;
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#111;
+  color:white;
+  padding:15px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.img-container{
+  overflow:hidden;
+  border-radius:12px;
+}
+
+.img-container img{
+  width:100%;
+  transition:0.5s;
+}
+
+.img-container:hover img{
+  transform:scale(1.08);
+}
+
+.links{
+  display:flex;
+  gap:15px;
+  justify-content:center;
+  margin-top:10px;
+}
+
+.links a{
+  color:#00ffd5;
+  text-decoration:none;
+}
+
+.skills span{
+  display:inline-block;
+  background:#eee;
+  padding:8px 12px;
+  margin:5px;
+  border-radius:6px;
+}
+
+/* EDUCATION + CERT */
+.info-card{
+  max-width:700px;
+  margin:auto;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div id="particles-js"></div>
+
+<div class="glass-card">
+<img src="profile.jpg" class="profile-img">
+
+<div>
+<h1 class="main-text">
+<span id="typing"></span><span class="cursor"></span>
+</h1>
+<p>B.Tech CSE (AI/ML) · 2nd Year</p>
+</div>
+</div>
+
+<!-- PROJECTS -->
+<section>
+<h2>Projects 🚀</h2>
+
+<div class="projects">
+
+  <!-- Project 1 -->
+  <div class="card">
+    <div class="img-container">
+      <img src="innerloop.png">
+    </div>
+
+    <h3>InnerLoop — Productivity Web App</h3>
+
+    <p>
+      A productivity and mental wellness app with streak tracking,
+      mood analysis, and personalized insights.
+    </p>
+
+    <div class="links">
+      <a href="https://shabana2115.github.io/innerloop/" target="_blank">Live</a>
+      <a href="https://github.com/shabana2115/innerloop" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Project 2 -->
+  <div class="card">
+    <h3>Machine Learning Model (KNN, SVM, Decision Tree)</h3>
+
+    <p>
+      Implemented multiple machine learning algorithms using Python and Scikit-learn 
+      to classify datasets and evaluate model performance using accuracy and confusion matrix.
+    </p>
+
+    <div class="links">
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+
+  <!-- Project 3 -->
+  <div class="card">
+    <h3>Exploratory Data Analysis Project</h3>
+
+    <p>
+      Performed data cleaning, preprocessing, and visualization using Pandas, NumPy, 
+      Matplotlib, and Seaborn to extract meaningful insights from datasets.
+    </p>
+
+    <div class="links">
+      <a href="#">GitHub</a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section>
+<h2>Skills 🛠</h2>
+<div class="skills">
+<span>Python</span>
+<span>Pandas</span>
+<span>Java</span>
+<span>JavaScript</span>
+<span>Machine Learning</span>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>Education 🎓</h2>
+
+  <div class="card info-card">
+
+    <h3>Manav Rachna University — Faridabad, India</h3>
+    <p><strong>B.Tech in Computer Science (Specialization in AI/ML)</strong></p>
+
+    <p>2021 – 2025</p>
+
+    <p style="margin-top:10px;">
+      <strong>Relevant Coursework:</strong> Machine Learning, Data Structures and Algorithms, 
+      Python Programming, Database Management Systems (DBMS), Statistics and Probability, 
+      Linear Algebra, Data Analysis using Python
+    </p>
+
+    <p style="margin-top:10px;">
+      <strong>GPA:</strong> 8.00 (1st Year) · Currently in 4th Semester
+    </p>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+<h2>Certifications 📜</h2>
+
+<div class="projects">
+
+<div class="card">
+<h3>AI Foundations: Neural Networks</h3>
+<p>LinkedIn Learning</p>
+</div>
+
+<div class="card">
+<h3>Deep Learning with Python: CNN</h3>
+<p>LinkedIn Learning</p>
+</div>
+
+<div class="card">
+<h3>Generative Adversarial Networks</h3>
+<p>LinkedIn Learning</p>
+</div>
+
+<div class="card">
+<h3>AI Workshop: GANs</h3>
+<p>LinkedIn Learning</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section>
+<h2>Contact 📬</h2>
+<p>Email: shabana1621y@gmail.com</p>
+</section>
+
+<script>
+const text = "Welcome to the portfolio of Shabana Yesmin";
+let i = 0;
+
+function typeEffect(){
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typeEffect, 40);
+}
+}
+typeEffect();
+
+particlesJS("particles-js", {
+particles: {
+number: { value: 80 },
+size: { value: 3 },
+move: { speed: 2 },
+line_linked: { enable: true },
+},
+interactivity: {
+events: {
+onhover: { enable: true, mode: "repulse" }
+}
+}
+});
+</script>
+
+</body>
+</html>
